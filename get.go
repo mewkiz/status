@@ -11,8 +11,10 @@ import "os/exec"
 type Package struct {
 	// Path is the import path of the package.
 	Path string
-	// CanGet specifies if it's possible to get the package.
+	// CanGet specifies if it's possible to "go get" the package.
 	CanGet bool
+	// CanBuild specifies if it's possible to "go build" the package.
+	CanBuild bool
 }
 
 // Get downloads the package and updates it's CanGet status.
@@ -25,7 +27,7 @@ func (pkg *Package) Get() (err error) {
 	cmd.Env = append([]string{"GIT_ASKPASS=/usr/bin/echo"}, os.Environ()...)
 	err = cmd.Run()
 	if err != nil {
-		return fmt.Errorf("get failed for: %s", pkg.Path)
+		return fmt.Errorf("Get failed for: %s", pkg.Path)
 	}
 	pkg.CanGet = true
 	return nil

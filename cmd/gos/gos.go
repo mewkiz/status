@@ -22,24 +22,42 @@ var pkgs = []*status.Package{
 }
 
 func gos() (err error) {
-	// The pkgs slice is defined in links.go for brevity.
 	for _, pkg := range pkgs {
+		// get
 		fmt.Println("get started:", pkg.Path)
 		err = pkg.Get()
 		if err != nil {
 			log.Println(err)
+			fmt.Println()
+			continue
 		} else {
 			fmt.Println("get succeeded for:", pkg.Path)
 		}
 		fmt.Println()
+		// build
+		fmt.Println("build started:", pkg.Path)
+		err = pkg.Build()
+		if err != nil {
+			log.Println(err)
+			fmt.Println()
+			continue
+		} else {
+			fmt.Println("build succeeded for:", pkg.Path)
+		}
+		fmt.Println()
 	}
-	// count how many packages that are "go getable".
-	var getable int
+	var getable, buildable int
 	for _, pkg := range pkgs {
+		// count how many packages that are "go getable".
 		if pkg.CanGet {
 			getable++
 		}
+		// count how many packages that are "go buildable".
+		if pkg.CanBuild {
+			buildable++
+		}
 	}
 	fmt.Printf("%d/%d packages are \"go getable\".\n", getable, len(pkgs))
+	fmt.Printf("%d/%d packages are \"go buildable\".\n", buildable, len(pkgs))
 	return nil
 }
