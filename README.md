@@ -5,10 +5,22 @@ This package gathers information about the status of Go packages.
 
 The following information is currently made available for packages:
 
-   * CanGet
-       - specifies if it's possible to "go get" the package.
-   * CanBuild
-       - specifies if it's possible to "go build" the package.
+   * CanGet:
+       - Specifies if it's possible to "go get" the package.
+   * CanBuild:
+       - Specifies if it's possible to "go build" the package.
+
+ideas
+-----
+
+The following ideas may be implemented in the future.
+
+   * Documentation maturity:
+       - How many exported identifiers have comments?
+       - What is the quality of these comments, in regards to
+         [godoc conventions][].
+
+[godoc conventions]: http://golang.org/doc/articles/godoc_documenting_go_code.html
 
 documentation
 -------------
