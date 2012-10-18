@@ -5,7 +5,7 @@ package main
 import "fmt"
 import "log"
 
-import "github.com/mewmew/status"
+import "github.com/mewkiz/status"
 
 func main() {
 	err := gos()
