@@ -15,6 +15,8 @@ ideas
 
 The following ideas may be implemented in the future.
 
+   * Example coverage:
+       - How many functions and methods have examples?
    * Documentation maturity:
        - How many exported identifiers have comments?
        - What is the quality of these comments, in regards to
