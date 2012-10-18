@@ -20,7 +20,8 @@ func (pkg *Package) Get() (err error) {
 	pkg.CanGet = false
 	// go get flags:
 	//    -d (only download)
-	cmd := exec.Command("go", "get", "-d", pkg.Path)
+	//    -u (update)
+	cmd := exec.Command("go", "get", "-d", "-u", pkg.Path)
 	cmd.Env = append([]string{"GIT_ASKPASS=/usr/bin/echo"}, os.Environ()...)
 	err = cmd.Run()
 	if err != nil {
