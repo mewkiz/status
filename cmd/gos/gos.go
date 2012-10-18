@@ -15,10 +15,11 @@ func main() {
 }
 
 var pkgs = []*status.Package{
-	{Path: "code.google.com/p/cascadia"}, // works
-	{Path: "github.com/404user/404repo"}, // fails. Outputs "Username for..."
-	{Path: "github.com/BurntSushi/xgb"},  // works
-	{Path: "github.com/burntsushi/xgb"},  // fails. Outputs "Username for..."
+	{Path: "code.google.com/p/cascadia"}, // +get +build
+	{Path: "github.com/404user/404repo"}, // -get
+	{Path: "github.com/BurntSushi/xgb"},  // +get +build
+	{Path: "github.com/burntsushi/xgb"},  // -get
+	{Path: "github.com/mewmew/broken"},   // +get -build
 }
 
 func gos() (err error) {
