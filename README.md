@@ -19,6 +19,10 @@ The following ideas may be implemented in the future.
        - How many exported identifiers have comments?
        - What is the quality of these comments, in regards to
          [godoc conventions][].
+   * Test coverage:
+       - How many functions and methods have test cases?
+   * Benchmark coverage:
+       - How many functions and methods have benchmarking tests?
 
 [godoc conventions]: http://golang.org/doc/articles/godoc_documenting_go_code.html
 
