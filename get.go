@@ -21,6 +21,7 @@ func (pkg *Package) Get() (err error) {
 	// go get flags:
 	//    -d (only download)
 	cmd := exec.Command("go", "get", "-d", pkg.Path)
+	cmd.Env = append([]string{"GIT_ASKPASS=/usr/bin/echo"}, os.Environ()...)
 	err = cmd.Run()
 	if err != nil {
 		return fmt.Errorf("get failed for: %s", pkg.Path)
