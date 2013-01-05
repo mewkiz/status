@@ -35,7 +35,7 @@ Documentation provided by GoPkgDoc:
 
    - [status][]
 
-[status]: http://go.pkgdoc.org/github.com/mewmew/status
+[status]: http://godoc.org/github.com/mewmew/status
 
 installation
 ------------
