@@ -31,7 +31,7 @@ The following ideas may be implemented in the future.
 documentation
 -------------
 
-Documentation provided by GoPkgDoc:
+Documentation provided by GoDoc:
 
    - [status][]
 
