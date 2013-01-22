@@ -1,3 +1,9 @@
+WIP
+---
+
+This project is a *work in progress*. The implementation is *incomplete* and
+subject to change. The documentation could be inaccurate.
+
 status
 ======
 
@@ -10,7 +16,7 @@ The following information is currently made available for packages:
    * CanBuild:
        - Specifies if it's possible to "go build" the package.
 
-ideas
+Ideas
 -----
 
 The following ideas may be implemented in the future.
@@ -28,7 +34,7 @@ The following ideas may be implemented in the future.
 
 [godoc conventions]: http://golang.org/doc/articles/godoc_documenting_go_code.html
 
-documentation
+Documentation
 -------------
 
 Documentation provided by GoDoc:
@@ -37,7 +43,7 @@ Documentation provided by GoDoc:
 
 [status]: http://godoc.org/github.com/mewmew/status
 
-installation
+Installation
 ------------
 
     $ go get github.com/mewmew/status/cmd/gos
