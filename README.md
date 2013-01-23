@@ -37,7 +37,7 @@ The following ideas may be implemented in the future.
 Documentation
 -------------
 
-Documentation provided by GoDoc:
+Documentation provided by GoDoc.
 
    - [status][]
 
