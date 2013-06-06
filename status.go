@@ -1,6 +1,8 @@
 package status
 
-import "go/doc"
+import (
+	"go/doc"
+)
 
 // Package contains status information about a package.
 type Package struct {

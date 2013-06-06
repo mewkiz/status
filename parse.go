@@ -1,14 +1,16 @@
 package status
 
-import "bytes"
-import "fmt"
-import "go/ast"
-import "go/doc"
-import "go/parser"
-import "go/token"
-import "os"
-import "path"
-import "strings"
+import (
+	"bytes"
+	"fmt"
+	"go/ast"
+	"go/doc"
+	"go/parser"
+	"go/token"
+	"os"
+	"path"
+	"strings"
+)
 
 // Parse parses the package's source and updates it's CanParse status.
 func (pkg *Package) Parse() (err error) {

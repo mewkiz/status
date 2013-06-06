@@ -1,11 +1,12 @@
 // gos - Go documentation status.
-
 package main
 
-import "fmt"
-import "log"
+import (
+	"fmt"
+	"log"
 
-import "github.com/mewkiz/status"
+	"github.com/mewkiz/status"
+)
 
 func main() {
 	err := gos()

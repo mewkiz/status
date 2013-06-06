@@ -1,11 +1,13 @@
 // Package status gathers information about the status of Go packages.
 package status
 
-import "fmt"
-import "io/ioutil"
-import "log"
-import "os"
-import "os/exec"
+import (
+	"fmt"
+	"io/ioutil"
+	"log"
+	"os"
+	"os/exec"
+)
 
 // Get downloads the package and updates it's CanGet status.
 func (pkg *Package) Get() (err error) {

@@ -21,6 +21,8 @@ Ideas
 
 The following ideas may be implemented in the future.
 
+   * Use the [golint][] tool locate potential issues with established
+     conventions.
    * Example coverage:
        - How many functions and methods have examples?
    * Documentation maturity:
@@ -33,6 +35,7 @@ The following ideas may be implemented in the future.
        - How many functions and methods have benchmarking tests?
 
 [godoc conventions]: http://golang.org/doc/articles/godoc_documenting_go_code.html
+[golint]: https://github.com/golang/lint/golint
 
 Documentation
 -------------

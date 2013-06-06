@@ -1,7 +1,9 @@
 package status
 
-import "fmt"
-import "os/exec"
+import (
+	"fmt"
+	"os/exec"
+)
 
 // Build compiles the package and updates it's CanBuild status.
 func (pkg *Package) Build() (err error) {
