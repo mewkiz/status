@@ -12,7 +12,7 @@ import (
 	"strings"
 )
 
-// Parse parses the package's source and updates it's CanParse status.
+// Parse parses the package's source and updates its CanParse status.
 func (pkg *Package) Parse() (err error) {
 	pkg.CanParse = false
 	fset := token.NewFileSet()

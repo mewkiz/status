@@ -8,7 +8,7 @@ import (
 	"os/exec"
 )
 
-// Get downloads the package and updates it's CanGet status.
+// Get downloads the package and updates its CanGet status.
 func (pkg *Package) Get() (err error) {
 	pkg.CanGet = false
 	// go get flags:

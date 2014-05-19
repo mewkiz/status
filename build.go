@@ -5,7 +5,7 @@ import (
 	"os/exec"
 )
 
-// Build compiles the package and updates it's CanBuild status.
+// Build compiles the package and updates its CanBuild status.
 func (pkg *Package) Build() (err error) {
 	pkg.CanBuild = false
 	cmd := exec.Command("go", "build", pkg.Path)
