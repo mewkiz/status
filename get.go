@@ -1,4 +1,3 @@
-// Package status gathers information about the status of Go packages.
 package status
 
 import (
@@ -32,5 +31,5 @@ func init() {
 		log.Fatalln(err)
 	}
 	os.Setenv("GOPATH", gopath)
-	fmt.Printf("Using '%s' as GOPATH\n", gopath)
+	fmt.Printf("Using the following GOPATH: %q\n", gopath)
 }

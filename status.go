@@ -1,3 +1,4 @@
+// Package status gathers information about the status of Go packages.
 package status
 
 import (
@@ -14,6 +15,8 @@ type Package struct {
 	CanParse bool
 	// CanBuild specifies if it's possible to "go build" the package.
 	CanBuild bool
+	// IsFork specifies if the package is a fork or not.
+	IsFork bool
 	// d is the package documentation for the entire package.
 	d *doc.Package
 }

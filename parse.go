@@ -8,7 +8,7 @@ import (
 	"go/parser"
 	"go/token"
 	"os"
-	"path"
+	"path/filepath"
 	"strings"
 )
 
@@ -38,15 +38,17 @@ func (pkg *Package) Parse() (err error) {
 		}
 		return fmt.Errorf("Parse failed. '%s' contains more than one package: %s", pkg.absPath(), buf.Bytes())
 	}
-	pkg.d = doc.New(astPkg, path.Clean(pkg.Path), 0)
+	pkg.d = doc.New(astPkg, filepath.Clean(pkg.Path), 0)
 	pkg.CanParse = true
 	return nil
 }
 
 // absPath returns the absolute import path of the package.
 func (pkg *Package) absPath() string {
-	return fmt.Sprintf("%s/src/%s", os.Getenv("GOPATH"), pkg.Path)
+	return filepath.Join(os.Getenv("GOPATH"), "src", pkg.Path)
 }
+
+// TODO(u): Make use of go/build and remove isPkgFile and isGoFile.
 
 // isPkgFile returns the status of isGoFile while ignoring test files
 // ("_test.go" suffix).
@@ -73,7 +75,7 @@ func isGoFile(fi os.FileInfo) bool {
 		// skip hidden files ("." prefix).
 		return false
 	}
-	if path.Ext(name) != ".go" {
+	if filepath.Ext(name) != ".go" {
 		// skip files without ".go" extension.
 		return false
 	}
