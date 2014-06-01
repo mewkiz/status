@@ -40,14 +40,14 @@ Documentation
 
 Documentation provided by GoDoc.
 
-- [status][]
+- [status][]: gathers information about the status of Go packages.
 
 [status]: http://godoc.org/github.com/mewmew/status
 
 Installation
 ------------
 
-	$ go get github.com/mewmew/status/cmd/gos
+	go get github.com/mewmew/status/cmd/gos
 
 public domain
 -------------
