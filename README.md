@@ -7,6 +7,10 @@ subject to change. The documentation can be inaccurate.
 status
 ======
 
+[![Build Status](https://travis-ci.org/mewkiz/status.svg?branch=master)](https://travis-ci.org/mewkiz/status)
+[![Coverage Status](https://img.shields.io/coveralls/mewkiz/status.svg)](https://coveralls.io/r/mewkiz/status?branch=master)
+[![GoDoc](https://godoc.org/github.com/mewkiz/status?status.svg)](https://godoc.org/github.com/mewkiz/status)
+
 This package gathers information about the status of Go packages.
 
 The following information is currently made available for packages:
